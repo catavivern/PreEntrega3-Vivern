@@ -24,7 +24,7 @@
   background-color: #676767; }
 
 .proyectos {
-  background-image: url("../img/Foto inversiones.jpg");
+  background-image: url("../img/Foto_inversiones.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -36,11 +36,27 @@
   font-weight: bold; }
 
 .tabla {
-  display: none; }
+  display: none;
+  width: min-content; }
+
+/*.mapa{
+    display: flex;
+    padding: 10%;
+    /*@extend %p-elementos;
+}
+*/
+body section .texto1-slogan, body section .texto1-slogan-ampliacion {
+  text-align: center;
+  padding: 2rem; }
+
+body header h1 a, body .footer-redes-sociales h3 a {
+  text-decoration: none;
+  color: black; }
 
 .mapa {
   display: flex;
-  padding: 10%; }
+  padding: 10%;
+  width: min-content; }
 
 body section .texto1-slogan, body section .texto1-slogan-ampliacion {
   text-align: center;
@@ -49,6 +65,11 @@ body section .texto1-slogan, body section .texto1-slogan-ampliacion {
 body header h1 a, body .footer-redes-sociales h3 a {
   text-decoration: none;
   color: black; }
+
+.mapa {
+  display: flex;
+  padding: 10%;
+  width: min-content; }
 
 body {
   background-color: white; }
@@ -80,6 +101,8 @@ body {
     display: flex;
     position: relative;
     padding: 100px; }
+  body main nav.fotos-sin-carrusel {
+    display: none; }
   body .footer-redes-sociales {
     text-decoration: none; }
 
@@ -121,12 +144,16 @@ nav ul li a {
 
 @media screen and (min-width: 415px) {
   /*se aplica el formato si la pantalla es mayor a la de un IphoneXR*/
-  .tabla {
-    display: flex; }
-  .infoTabla {
-    display: none; }
+  main nav.fotos-sin-carrusel {
+    display: block;
+    position: relative; }
   .cards-productos {
-    display: flex; } }
+    display: flex; }
+  .p-info-tabla {
+    display: grid; }
+  iframe {
+    width: 768px;
+    height: 431px; } }
 
 @media screen and (min-width: 769px) {
   /*se aplica el formato si la pantalla es mayor a la de un IPad Mini*/
@@ -148,4 +175,25 @@ nav ul li a {
     position: relative; }
   .cards-productos-vmin {
     display: flex;
-    position: relative; } }
+    position: relative; }
+  iframe {
+    width: 840px;
+    height: 473px; }
+  .info-tabla {
+    display: none; }
+  .tabla {
+    display: flex;
+    padding: 2rem; }
+  main {
+    display: grid;
+    grid-template-areas: "h2 h2" "tabla iframe" "p iframe";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 40% 60%; }
+  section.h2 {
+    grid-area: h2; }
+  section.tabla {
+    grid-area: tabla; }
+  section.texto-qs {
+    grid-area: p; }
+  section.video-dow {
+    grid-area: iframe; } }

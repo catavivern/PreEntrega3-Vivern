@@ -7,3 +7,9 @@
     text-decoration: none;
     color: $color-texto;
 }
+
+%p-elementos{
+    display: flex;
+    padding: 10%;
+    width: min-content;
+}

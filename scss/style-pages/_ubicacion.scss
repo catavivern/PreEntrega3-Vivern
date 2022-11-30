@@ -1,4 +1,6 @@
+@import"../utilidades/extend";
+
+
 .mapa{
-    display: flex;
-    padding: 10%;
+    @extend %p-elementos;
 }

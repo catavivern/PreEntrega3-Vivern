@@ -73,6 +73,9 @@
             position: relative;
             padding: 100px;
         }
+        main nav.fotos-sin-carrusel{
+            display: none;
+        } 
         .footer-redes-sociales{
             text-decoration: none;
             h3 a{
@@ -124,15 +127,21 @@
     }
 
 @media screen and (min-width: 415px) { /*se aplica el formato si la pantalla es mayor a la de un IphoneXR*/
-    .tabla{
-        display:flex
-    }
-    
-    .infoTabla{
-        display: none
+    main nav.fotos-sin-carrusel{
+        display: block;
+        position: relative;
     }
     .cards-productos{
         display: flex;
+    }
+
+    .p-info-tabla{
+        display: grid;
+    }
+
+    iframe{
+        width: 768px;
+        height: 431px;
     }
 } 
 
@@ -165,6 +174,42 @@
     .cards-productos-vmin{
         @include cards-position
     }
+    iframe{
+        width: 840px;
+        height: 473px;
+    }
+
+    .info-tabla{
+        display: none;
+    }
+    .tabla{
+        display: flex;
+        padding: 2rem;
+    }
+   
+
+    main{
+        display: grid;
+        grid-template-areas: 
+        "h2 h2"
+        "tabla iframe"
+        "p iframe";
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 10% 40% 60%;
+    }
+    section.h2{
+        grid-area: h2;
+    }
+    section.tabla{
+        grid-area: tabla;
+    }
+    section.texto-qs{
+        grid-area: p;
+    }
+    section.video-dow{
+        grid-area: iframe;
+    }
+
 }
 
 
