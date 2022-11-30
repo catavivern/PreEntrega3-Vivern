@@ -1,0 +1,176 @@
+/*comentario*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /*pongo mi tipografía en el reset porque sé que voy a usar solo roboto y me ahorra codigo. Si tuviese mas tipografías, haría un mixin*/
+    font-family: 'Raleway', sans-serif;
+}
+//sylesheets secundarias
+@import "style-pages/contacto";
+@import "style-pages/producto";
+@import "style-pages/proyectos";
+@import "style-pages/quienes_somos";
+@import "style-pages/ubicacion";
+
+//utilidades
+@import "utilidades/mixin";
+@import "utilidades/variables";
+@import "utilidades/extend";
+
+
+//uso nesting
+    body{
+        background-color: $color-fondo;
+        header{
+            background-color: $color-botones;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        
+            h1 {
+                background-color: $color-botones;
+                position: relative;
+                text-align: left;
+                display: flex;
+                a{
+                    @extend %a-texto;
+                }
+            }
+            h2{
+                background-color: $color-botones;
+                text-align: left;
+                display: flex;
+                padding: 30px;
+            }
+            h3{
+                background-color: $color-botones;
+                text-align: left;
+                display: flex;
+                padding: 30px;
+            }
+    
+        }
+        
+        section{
+            section .slogan{
+                padding: 5%;
+                width: 100%;
+            }
+            
+            .texto1-slogan{            
+                @extend %textos;
+            }
+            
+            .texto1-slogan-ampliacion{
+                @extend %textos;
+            }
+            
+        }
+        main nav ul{
+            display: flex;
+            position: relative;
+            padding: 100px;
+        }
+        .footer-redes-sociales{
+            text-decoration: none;
+            h3 a{
+                @extend %a-texto;
+            }
+        }
+    }
+   
+    
+    .menu{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+    }
+    .menuLinea{
+        display:none
+    }
+    
+    nav ul{
+        list-style: none;
+        display: flex;
+        gap: 10px;
+    }
+    
+    nav ul li{
+        border: 1px solid black;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    nav ul li:hover{
+        text-decoration: none;
+        border: 1px solid black;
+        font-weight: bolder;
+        gap: 20px;
+        padding: 10px;
+        border-color: white;
+    }
+    
+    nav ul li a{
+        background-color:white;
+        padding: 5px;
+        text-decoration: none;
+        color:black;
+        text-shadow: none;
+        border-radius: 5px;
+        border-style: unset;
+        border-color: black;
+    }
+
+@media screen and (min-width: 415px) { /*se aplica el formato si la pantalla es mayor a la de un IphoneXR*/
+    .tabla{
+        display:flex
+    }
+    
+    .infoTabla{
+        display: none
+    }
+    .cards-productos{
+        display: flex;
+    }
+} 
+
+@media screen and (min-width: 769px) {/*se aplica el formato si la pantalla es mayor a la de un IPad Mini*/
+    .menuLinea{
+        display: flex;
+    }
+    
+    .slogan{
+        display: grid;
+        grid-template-areas: 
+        "car txt1"
+        "car txt1a";
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 30% 70%;
+    }
+    .carouselExampleControls{
+        grid-area: car;
+    }
+    .texto1-slogan{
+        grid-area: txt1;
+    }
+    .texto1-slogan-ampliacion{
+        grid-area: txt1a;
+    }
+    .cards-productos-vmay{
+        @include cards-position
+
+    }
+    .cards-productos-vmin{
+        @include cards-position
+    }
+}
+
+
+
+
+
+
+
+

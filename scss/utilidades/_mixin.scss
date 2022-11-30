@@ -1,0 +1,9 @@
+@mixin cards {
+    grid-template-columns: auto;
+    margin: 2rem;
+}
+
+@mixin cards-position {
+    display: flex;
+    position: relative;
+}

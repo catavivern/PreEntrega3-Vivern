@@ -1,0 +1,14 @@
+
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+.cards-productos-vmay{
+    @include cards();
+    background-color: $color-card-vmay;
+}
+
+.cards-productos-vmin{
+    @include cards();
+    background-color: $color-card-vmin;
+
+}

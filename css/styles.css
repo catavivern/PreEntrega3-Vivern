@@ -1,179 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-}
+@charset "UTF-8";
+/*comentario*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /*pongo mi tipografía en el reset porque sé que voy a usar solo roboto y me ahorra codigo. Si tuviese mas tipografías, haría un mixin*/
+  font-family: 'Raleway', sans-serif; }
 
-h1 {
+.formulario-contacto {
+  background-color: #f2f2f2;
+  box-sizing: 400px;
+  padding: 50px; }
+
+.cards-productos-vmay {
+  grid-template-columns: auto;
+  margin: 2rem;
+  background-color: #bdbdbd; }
+
+.cards-productos-vmin {
+  grid-template-columns: auto;
+  margin: 2rem;
+  background-color: #676767; }
+
+.proyectos {
+  background-image: url("../img/Foto inversiones.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.inversiones {
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold; }
+
+.tabla {
+  display: none; }
+
+.mapa {
+  display: flex;
+  padding: 10%; }
+
+body section .texto1-slogan, body section .texto1-slogan-ampliacion {
+  text-align: center;
+  padding: 2rem; }
+
+body header h1 a, body .footer-redes-sociales h3 a {
+  text-decoration: none;
+  color: black; }
+
+body {
+  background-color: white; }
+  body header {
     background-color: white;
-    position: relative;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    display: flex;
-}
-
-h2{
-    background-color: white;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    padding: 30px;
-}
-
-body{
-    background-color: white;
-}
-
-header{
-    background-color:white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-}
-.menu{
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
-}
-.menuLinea{
-    display:none
-}
-
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
-nav ul li{
-    border: 1px solid black;
-    gap: 20px;
-    padding: 10px;
-}
-
-nav ul li:hover{
-    text-decoration: none;
-    border: 1px solid black;
-    font-weight: bolder;
-    gap: 20px;
-    padding: 10px;
-    border-color: white;
-}
-
-nav ul li a{
-    background-color:white;
-    padding: 5px;
-    text-decoration: none;
-    color:black;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: none;
-    border-radius: 5px;
-    border-style: unset;
-    border-color: black;
-}
-
-.formulario-contacto{
-    background-color: rgb(242, 242, 242);
-    box-sizing: 400px;
-    padding: 50px;
-}
-
-.proyectos{
-    background-image: url("../img/Foto\ inversiones.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; /*auto, contain y cover*/
-}
-
-main nav ul{
-    display: flex;
-    position: relative;
-    padding: 100px;
-}
-section .slogan{
+    padding: 1rem; }
+    body header h1 {
+      background-color: white;
+      position: relative;
+      text-align: left;
+      display: flex; }
+    body header h2 {
+      background-color: white;
+      text-align: left;
+      display: flex;
+      padding: 30px; }
+    body header h3 {
+      background-color: white;
+      text-align: left;
+      display: flex;
+      padding: 30px; }
+  body section section .slogan {
     padding: 5%;
-    width: 100%;
-}
-
-
-.texto1-slogan{
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    padding: 2rem;
-}
-
-.texto1-slogan-ampliacion{
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    padding: 2rem;
-}
-
-.tabla{
-    display: none;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-}
-
-article{
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-}
-
-.cards-productos{
+    width: 100%; }
+  body main nav ul {
     display: flex;
-    margin: 2rem;
-}
+    position: relative;
+    padding: 100px; }
+  body .footer-redes-sociales {
+    text-decoration: none; }
 
-.inversiones{
-    background-color: black;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight:bold;
-}
+.menu {
+  display: flex;
+  position: relative;
+  justify-content: flex-end; }
 
-.footer-redes-sociales{
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Raleway', sans-serif;
-}
+.menuLinea {
+  display: none; }
 
-@media screen and (min-width: 415px) { /*se aplica el formato si la pantalla es mayor a la de un IphoneXR*/
-    .tabla{
-        display:flex
-    }
-    
-    .infoTabla{
-        display: none
-    }
-} 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; }
 
-@media screen and (min-width: 769px) {/*se aplica el formato si la pantalla es mayor a la de un IPad Mini*/
-    .menuLinea{
-        display: grid
-    }
-    
-    .slogan{
-        display: grid;
-        grid-template-areas: 
-        "car txt1"
-        "car txt1a";
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 30% 70%;
-    }
-    .carouselExampleControls{
-        grid-area: car;
-    }
-    .texto1-slogan{
-        grid-area: txt1;
-    }
-    .texto1-slogan-ampliacion{
-        grid-area: txt1a;
+nav ul li {
+  border: 1px solid black;
+  gap: 20px;
+  padding: 10px; }
 
-    }
-}
+nav ul li:hover {
+  text-decoration: none;
+  border: 1px solid black;
+  font-weight: bolder;
+  gap: 20px;
+  padding: 10px;
+  border-color: white; }
 
+nav ul li a {
+  background-color: white;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+  border-radius: 5px;
+  border-style: unset;
+  border-color: black; }
 
+@media screen and (min-width: 415px) {
+  /*se aplica el formato si la pantalla es mayor a la de un IphoneXR*/
+  .tabla {
+    display: flex; }
+  .infoTabla {
+    display: none; }
+  .cards-productos {
+    display: flex; } }
+
+@media screen and (min-width: 769px) {
+  /*se aplica el formato si la pantalla es mayor a la de un IPad Mini*/
+  .menuLinea {
+    display: flex; }
+  .slogan {
+    display: grid;
+    grid-template-areas: "car txt1" "car txt1a";
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 30% 70%; }
+  .carouselExampleControls {
+    grid-area: car; }
+  .texto1-slogan {
+    grid-area: txt1; }
+  .texto1-slogan-ampliacion {
+    grid-area: txt1a; }
+  .cards-productos-vmay {
+    display: flex;
+    position: relative; }
+  .cards-productos-vmin {
+    display: flex;
+    position: relative; } }
